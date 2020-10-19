@@ -1,59 +1,26 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import {useSpring, animated, config} from "react-spring"
 import "./anim-logo.css"
+import { Spring } from 'react-spring/renderprops';
 
 export default function AnimLogo ({value} : {value : string}) {
 
-    const [enter, setEnter] = useState(false)
-    const {x}  = useSpring({config : {duration : 300},x : !enter ? 0 : 1})
+    const [currentPath, setCurrentPath] = useState(0)
+    const paths = [
+        "M11.38,39.66,0,28.28,11.38,16.91l7.71,7.71L36,7.71,56.57,28.28,36,48.85,19.09,32Zm7.71-15-3.66,3.66L19.09,32l3.67-3.67Z",
+        "M45.19,16.91,56.57,28.28,45.19,39.66,37.48,32,20.57,48.85,0,28.28,20.57,7.71,37.48,24.62ZM37.48,32l3.66-3.67-3.66-3.66-3.67,3.66Z"
+    ]
 
-
-    const onHoverEnter = useCallback(()=> {
-        setEnter(state=>!state)
-    }, [])
+    const [props, set] = useSpring(()=>({path : paths[0]}))
 
     return (
-        <div className="anim-logo" onMouseEnter={onHoverEnter}>
-            <animated.svg id="Logo" xmlns="http://www.w3.org/2000/svg" width="86.569" height="56.569" viewBox="0 0 56.569 56.569">
-                    <animated.path
-                    d={x.interpolate({
-                        range : [0,1],
-                        output : [
-                            "M-1269.909,728H-1286V711.909h10.909V688H-1246V717.09h-23.909V728Zm-5.182-16.091v5.182h5.182v-5.182Z",
-                            "M-1262.909,735H-1293V704.909h23.909V694H-1252v17.09h-10.909V735Zm-6.182-30.091v6.182h6.182v-6.182Z"
-                        ]
-                    })}
-                    id="Logo-2"
-                    data-name="Logo"
-                    transform="translate(1424.113 422.85) rotate(45)"
-                    fill="#2f3245"
-                    // fill="freeze"
-                    />  
-                    {/* <svg xmlns="http://www.w3.org/2000/svg" width="57.983" height="57.983" viewBox="0 0 57.983 57.983">
-  <path id="Logo" d="M-1262.909,735H-1293V704.909h23.909V694H-1252v17.09h-10.909V735Zm-6.182-30.091v6.182h6.182v-6.182Z" transform="translate(1434.013 423.557) rotate(45)" fill="#2f3245"/>
-</svg> */}
-
-            </animated.svg>
-            <animated.svg id="Logo" xmlns="http://www.w3.org/2000/svg" width="86.569" height="56.569" viewBox="0 0 56.569 56.569">
-                    <animated.path
-                    d={x.interpolate({
-                        range : [0,1],
-                        output : [
-                            "M-1262.909,735H-1293V704.909h23.909V694H-1252v17.09h-10.909V735Zm-6.182-30.091v6.182h6.182v-6.182Z",
-                            "M-1269.909,728H-1286V711.909h10.909V688H-1246V717.09h-23.909V728Zm-5.182-16.091v5.182h5.182v-5.182Z"
-                        ]
-                    })}
-                    id="Logo-2"
-                    data-name="Logo"
-                    transform="translate(1434.013 423.557) rotate(45)"
-                    fill="#2f3245"
-                    // fill="freeze"
-                    />  
-                    {/* <svg xmlns="http://www.w3.org/2000/svg" width="57.983" height="57.983" viewBox="0 0 57.983 57.983">
-  <path id="Logo" d="M-1262.909,735H-1293V704.909h23.909V694H-1252v17.09h-10.909V735Zm-6.182-30.091v6.182h6.182v-6.182Z" transform="translate(1434.013 423.557) rotate(45)" fill="#2f3245"/>
-</svg> */}
-
-            </animated.svg>
+        <div className="anim-logo" onClick={()=>set({path : paths[1]})}>  
+            <svg width="57.983" height="57.983" viewBox="0 0 57.983 57.983">
+                <Spring reset native from={{ t: 0 }} to={{ t: 1 }}>
+                    {({t} : {t : any})=><animated.path fill="#2f3245" d={props.path} />}
+                </Spring>
+                
+            </svg>
         </div>
     )
 }
