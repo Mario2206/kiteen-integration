@@ -1,38 +1,26 @@
-.App {
-  text-align: center;
+:root {
+    --back-blue-color : #83DCFF;
+    --back-yellow-color : #FFF396;
+    --back-grey-color : #E6E4E5;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    padding: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    font-size: 90%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+    font-family: "Moon-regular";
+    src: url("./assets/font/Moon2.0-Regular.otf");
 }
-
-.App-link {
-  color: #61dafb;
+@font-face {
+    font-family: "Moon";
+    src: url("./assets/font/Moon2.0-Bold.otf");
+    font-weight: bold;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+    font-family: "Moon";
+    src: url("./assets/font/Moon2.0-Light.otf");
+    font-weight: lighter;
 }

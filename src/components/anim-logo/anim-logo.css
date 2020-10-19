@@ -1,0 +1,13 @@
+.anim-logo {
+    width: 135px;
+    height: 135px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.anim-logo--text {
+    font-family: "Moon-regular";
+    font-weight: bold;
+    letter-spacing: 2px;
+}

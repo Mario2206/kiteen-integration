@@ -1,0 +1,8 @@
+.dynamic-view {
+    height: 100vh;
+}
+.dynamic-view--text-part {
+    background-color: var(--back-blue-color);
+    width: 50%;
+    height: 100%;
+}
