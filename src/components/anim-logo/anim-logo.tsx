@@ -3,7 +3,7 @@ import { useAnim } from '../../hooks/use-anim/use-anim';
 import {CSSTransition} from "react-transition-group"
 import "./anim-logo.css"
 
-export default function AnimLogo ({value} : {value : string}) {
+function AnimLogo ({value} : {value : string}) {
 
     const animateRefEnter = useRef<any>(null)
     const animateRefEnd = useRef<any>(null)
@@ -77,3 +77,7 @@ export default function AnimLogo ({value} : {value : string}) {
         </div>
     )
 }
+
+const AnimLogoMemo = React.memo(AnimLogo)
+
+export default AnimLogoMemo

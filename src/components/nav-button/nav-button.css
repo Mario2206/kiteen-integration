@@ -5,14 +5,15 @@
     display: inline-flex;
     flex-direction: column;
     font-family: "Moon";
-    font-weight: normal;
+    font-weight: 100;
     cursor: pointer;
+    letter-spacing: 2px;
 }
 .nav-button::before {
     content: "";
     transition: 0.3s;
     margin-bottom: 20px;
-    height: 7px;
+    height: 5px;
     width: 100%;
     background-color: #2F3245;
     transform: scaleX(0);

@@ -1,0 +1,10 @@
+.nav-bar {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+}
+.nav-bar--container-burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}

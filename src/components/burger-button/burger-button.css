@@ -1,0 +1,18 @@
+.burger-button {
+    width: 25px;
+    height: 14px;
+    border: none;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    outline: none;
+}
+.burger-button::before, .burger-button::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    display: block;
+    background-color: black;
+}

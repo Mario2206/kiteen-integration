@@ -12,7 +12,10 @@ export default function DynamicView () {
                 <AnimLogo value="KITTEN"/>
             </div> 
             <div className="dynamic-view--picture-part">
-                <NavBar/>  
+                <div className="dynamic-view--container-nav">
+                    <NavBar/> 
+                </div>
+                 
             </div>     
         </section>       
     )
