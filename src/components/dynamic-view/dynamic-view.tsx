@@ -12,7 +12,9 @@ export default function DynamicView () {
         <section className="dynamic-view">
             <div className="dynamic-view--text-part">
                 <AnimLogo value="KITTEN" className="dynamic-view--anim-logo"/>
-                <img src={require("../../assets/img/img1.png")} alt="photo" className="miniature"/>
+                <div className="dynamic-view--container-miniature">
+                    <img src={require("../../assets/img/img1.png")} alt="photo" className="miniature"/>
+                </div>                
                 <div className="dynamic-view--container-text">
                     <h1 className="dynamic-view--main-title">Ornate Style</h1>
                     <p className="dynamic-view--description">
