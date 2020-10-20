@@ -1,26 +1,90 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
-import {useSpring, animated, config} from "react-spring"
+import React, { useCallback, useRef, useState } from 'react';
+import { useAnim } from '../../hooks/use-anim/use-anim';
+import {CSSTransition} from "react-transition-group"
 import "./anim-logo.css"
-import { Spring } from 'react-spring/renderprops';
 
-export default function AnimLogo ({value} : {value : string}) {
+function AnimLogo ({value, className} : {value : string, className? : string}) {
 
-    const [currentPath, setCurrentPath] = useState(0)
-    const paths = [
-        "M11.38,39.66,0,28.28,11.38,16.91l7.71,7.71L36,7.71,56.57,28.28,36,48.85,19.09,32Zm7.71-15-3.66,3.66L19.09,32l3.67-3.67Z",
-        "M45.19,16.91,56.57,28.28,45.19,39.66,37.48,32,20.57,48.85,0,28.28,20.57,7.71,37.48,24.62ZM37.48,32l3.66-3.67-3.66-3.66-3.67,3.66Z"
-    ]
+    const animateRefEnter = useRef<any>(null)
+    const animateRefEnd = useRef<any>(null)
+    const buttonRef = useRef<HTMLDivElement>(null)
+    const textRef = useRef<HTMLElement>(null)
+    const animDuration = 1
 
-    const [props, set] = useSpring(()=>({path : paths[0]}))
+    const [anim, setAnim] = useAnim("")
+    const [text, setText] = useState("")
+    const [active, setActiveState] = useState(false)
+
+    const onHoverEnter = useCallback(() => {    
+
+        const currentEnter= animateRefEnter.current
+        const currentOut = animateRefEnd.current
+
+        if(currentEnter && currentOut) {
+            if(active) {
+                setAnim(`moveBack ${animDuration}s forwards`)
+                currentOut.beginElement()
+                setText("")
+            }
+            else
+            {
+                setAnim(`moveLeft ${animDuration}s forwards`)
+                currentEnter.beginElement()
+                setText(value)
+            }
+            setActiveState(state=>!state)
+        }  
+    }, [active])
 
     return (
-        <div className="anim-logo" onClick={()=>set({path : paths[1]})}>  
-            <svg width="57.983" height="57.983" viewBox="0 0 57.983 57.983">
-                <Spring reset native from={{ t: 0 }} to={{ t: 1 }}>
-                    {({t} : {t : any})=><animated.path fill="#2f3245" d={props.path} />}
-                </Spring>
+        <div className={`anim-logo ${className ?? ""}`} onMouseEnter={onHoverEnter} ref={buttonRef}>
+            <span className="anim-logo--container"  style={anim}>
+                <svg
+                width="86.569" 
+                height="56.569" 
+                viewBox="0 0 56.569 56.569" 
+                className="anim-logo--picture"
+                >
+                    <path id="Logo-2" data-name="Logo" d=" M-1269.909,728H-1286V711.909h10.909V688H-1246V717.09h-23.909V728Zm-5.182-16.091v5.182h5.182v-5.182Z" transform="translate(1424.113 422.85) rotate(45)" fill="#2f3245">
+                        <animate
+                        ref={animateRefEnter}
+                        dur="0.2s"
+                        attributeName="d"
+                        values="
+                        M-1269.909,728H-1286V711.909h10.909V688H-1246V717.09h-23.909V728Zm-5.182-16.091v5.182h5.182v-5.182Z;
+                        M-1262.909,735H-1293V704.909h23.909V694H-1252v17.09h-10.909V735Zm-6.182-30.091v6.182h6.182v-6.182Z
+                        "
+                        fill="freeze"
+                        begin="indefinite"
+                        />  
+                        <animate
+                        ref={animateRefEnd}
+                        dur="0.2s"
+                        attributeName="d"
+                        values="
+                        M-1262.909,735H-1293V704.909h23.909V694H-1252v17.09h-10.909V735Zm-6.182-30.091v6.182h6.182v-6.182Z;
+                        M-1269.909,728H-1286V711.909h10.909V688H-1246V717.09h-23.909V728Zm-5.182-16.091v5.182h5.182v-5.182Z
+                        "
+                        begin="indefinite"
+                        fill="freeze"
+                        />  
+                    </path>        
+                </svg>  
+                <CSSTransition 
+                nodeRef={textRef}
+                in={active} 
+                timeout={animDuration * 4000} 
+                unmountOnExit
+                className="anim-logo-transition" 
+                classNames="anim-logo-transition">
+                    <span className="anim-logo--text" ref={textRef}>{value}</span> 
+                </CSSTransition>
                 
-            </svg>
+            </span>
         </div>
     )
 }
+
+const AnimLogoMemo = React.memo(AnimLogo)
+
+export default AnimLogoMemo

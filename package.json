@@ -5,16 +5,18 @@
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
+    "@testing-library/react-hooks": "^3.4.2",
     "@testing-library/user-event": "^7.2.1",
     "@types/jest": "^24.9.1",
     "@types/node": "^12.12.68",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
-    "flubber": "^0.4.2",
+    "@types/react-transition-group": "^4.4.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-scripts": "3.4.3",
     "react-spring": "^8.0.27",
+    "react-transition-group": "^4.4.1",
     "typescript": "^3.7.5"
   },
   "scripts": {
@@ -37,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/testing-library__jest-dom": "^5.9.5",
+    "react-test-renderer": "^16.9.0"
   }
 }

@@ -1,13 +1,62 @@
 .anim-logo {
-    width: 135px;
-    height: 135px;
+    width: 200px;
+    height: 200px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     background-color: white;
+    transition: 1s;
 }
-.anim-logo--text {
+.anim-logo--container {
+    position: relative;
+}
+.anim-logo-transition {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    transform: translateX(100%);
     font-family: "Moon-regular";
     font-weight: bold;
     letter-spacing: 2px;
+}
+.anim-logo-transition-enter {
+    opacity: 0;
+}
+.anim-logo-transition-enter-active{
+    opacity: 1;
+    transition: 2000ms; 
+}
+.anim-logo-transition-exit {
+    opacity: 1;
+}
+.anim-logo-transition-exit-active{
+    opacity: 0;
+    transition: 500ms; 
+}
+
+@keyframes pop {
+    from {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-40%);
+    }
+}
+@keyframes moveBack {
+    from {
+        transform: translateX(-40%);
+    }
+    to {
+        transform: translateX(0%);
+    }
 }

@@ -1,8 +1,65 @@
 .dynamic-view {
     height: 100vh;
+    display: flex;
 }
 .dynamic-view--text-part {
+    position: relative;
+    z-index: 1;
     background-color: var(--back-blue-color);
     width: 50%;
     height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding-left: 10%; */
+}
+.dynamic-view--picture-part {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 20px 60px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.dynamic-view--container-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+.miniature {
+    position: absolute;
+    width: 94%;
+    top: 17%;
+    left: 77%;
+    z-index: -1;
+}
+.dynamic-view--anim-logo {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.dynamic-view--container-text {
+    width: 80%;
+    align-self: flex-end;
+}
+.dynamic-view--main-title {
+    font-size: 8em;
+    font-family:"Didot";
+    font-weight: lighter;
+    font-stretch: expanded; 
+    color: var(--blue-color); 
+}
+.dynamic-view--description {
+    font-family: "Moon-regular";
+    color: var(--blue-color);
+    font-size: 1.1em;
+    width: 110%;
+    padding: 20px 0;
+}
+.dynamic-view--explore-button {
+    margin-top: 30px;
+}
+.dynamic-view--evolution-bar-container {
+    width: 100%;
 }

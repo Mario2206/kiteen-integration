@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import DynamicView from './components/dynamic-view/dynamic-view';
 import "./app.css"
 

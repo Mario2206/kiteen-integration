@@ -2,13 +2,15 @@
     --back-blue-color : #83DCFF;
     --back-yellow-color : #FFF396;
     --back-grey-color : #E6E4E5;
+    --blue-color :  #2F3245;
+    --grey-color : #B5BECB;
 }
 * {
     margin: 0;
     padding: 0;
 }
 body {
-    font-size: 90%;
+    font-size: 80%;
 }
 @font-face {
     font-family: "Moon-regular";
@@ -16,11 +18,15 @@ body {
 }
 @font-face {
     font-family: "Moon";
-    src: url("./assets/font/Moon2.0-Bold.otf");
-    font-weight: bold;
+    src: url("./assets/font/Moon-Bold.otf");
+    font-weight: 500;
 }
 @font-face {
     font-family: "Moon";
     src: url("./assets/font/Moon2.0-Light.otf");
     font-weight: lighter;
+}
+@font-face {
+    font-family: "Didot";
+    src: url("./assets/font/Didot-medium.ttf");
 }

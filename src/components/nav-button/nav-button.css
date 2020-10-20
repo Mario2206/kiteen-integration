@@ -1,0 +1,30 @@
+.nav-button {
+    background: none;
+    border: none;
+    outline: none;
+    display: inline-flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    font-weight: lighter;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-size: 0.8em;
+}
+.nav-button::before {
+    content: "";
+    transition: 0.3s;
+    margin-bottom: 20px;
+    height: 5px;
+    width: 100%;
+    background-color:var(--blue-color);
+    transform: scaleX(0);
+    opacity: 0;
+    transform-origin: left;
+}
+.nav-button:hover {
+    font-weight: bold;
+}
+.nav-button:hover::before {
+    transform: scaleX(1);
+    opacity: 1;
+}
