@@ -1,0 +1,28 @@
+.nav-button {
+    background: none;
+    border: none;
+    outline: none;
+    display: inline-flex;
+    flex-direction: column;
+    font-family: "Moon";
+    font-weight: normal;
+    cursor: pointer;
+}
+.nav-button::before {
+    content: "";
+    transition: 0.3s;
+    margin-bottom: 20px;
+    height: 7px;
+    width: 100%;
+    background-color: #2F3245;
+    transform: scaleX(0);
+    opacity: 0;
+    transform-origin: left;
+}
+.nav-button:hover {
+    font-weight: 500;
+}
+.nav-button:hover::before {
+    transform: scaleX(1);
+    opacity: 1;
+}

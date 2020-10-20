@@ -1,5 +1,6 @@
 .dynamic-view {
     height: 100vh;
+    display: flex;
 }
 .dynamic-view--text-part {
     background-color: var(--back-blue-color);
