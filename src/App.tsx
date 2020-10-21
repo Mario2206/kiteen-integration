@@ -15,13 +15,18 @@ function App() {
 
   function displayView () {
     return(
-      <DynamicView 
-          className="app--dynamic-view"
-          title={pages[currentIndexView].title}
-          description={pages[currentIndexView].description}
-          img={require("./assets/img/" + pages[currentIndexView].imgName)}
-          color={pages[currentIndexView].color}
-          />
+      pages.map((page,index)=> (
+          <DynamicView 
+            key={index}
+            className="app--dynamic-view"
+            title={page.title}
+            description={page.description}
+            img={require("./assets/img/" + page.imgName)}
+            color={page.color}
+            visible={index === currentIndexView}
+            />
+    ))
+      
     )
   }
 
