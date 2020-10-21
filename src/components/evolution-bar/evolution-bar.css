@@ -2,8 +2,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
-    width: 85%;
+    width: 100%;
 }
 .evolution-bar--button {
     font-family: "Moon-regular";
@@ -20,14 +19,6 @@
     border-radius: 100px;
     position: relative;
 }
-/* .evolution-bar--bar {
-    height: 100%;
-    display: block;
-    width: 100%;
-    background-color: var(--grey-color);
-    border-radius: 100px;
-    position: relative;
-} */
 .evolution-bar--bar{
     box-sizing: border-box;
     content: "";
@@ -40,4 +31,5 @@
     display: block;
     transform-origin: left;
     transform: scaleX(0.5);
+    transition: 1s;
 }

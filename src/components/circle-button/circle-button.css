@@ -1,8 +1,8 @@
 .circle-button {
-    background: none;
-    border: none;
-    outline: none;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .circle-button--border {
     position: absolute;
@@ -19,6 +19,9 @@
 }
 .circle-button--child {
     cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
 }
 .circle-button--child:hover .circle-button--border {
     transform: scale(1);

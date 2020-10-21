@@ -1,6 +1,6 @@
 .nav-bar {
     display: flex;
-    width: 80%;
+    width: 100%;
     justify-content: flex-end;
     position: relative;
     height: 45px;

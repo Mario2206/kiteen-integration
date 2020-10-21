@@ -3,10 +3,12 @@ import CircleButton from '../circle-button/circle-button';
 import "./evolution-bar.css"
 
 interface IEEvolutionBar {
-    evolution : number //number between 0 and 1
+    evolution : number //number between 0 and 1,
+    back? : ()=>void,
+    next? : ()=>void
 }
 
-export default function EvolutionBar ({evolution} : IEEvolutionBar) {
+export default function EvolutionBar ({evolution, back, next} : IEEvolutionBar) {
 
     const [transformStyle, setTransformStyle] = useState<CSSProperties>({transform : "scale(0)"})
 
@@ -17,11 +19,11 @@ export default function EvolutionBar ({evolution} : IEEvolutionBar) {
 
     return (
         <nav className="evolution-bar">
-            <CircleButton className="evolution-bar--button" width="15%">PREV</CircleButton>
+            <CircleButton className="evolution-bar--button" width="15%" onClick={back}>PREV</CircleButton>
             <div className="evolution-bar--container-bar">
-                <span className="evolution-bar--bar" style={transformStyle}></span>
+                <span className="evolution-bar--bar" style={transformStyle} data-testid="evolution-bar--bar"></span>
             </div>
-            <CircleButton className="evolution-bar--button" width="15%">NEXT</CircleButton>
+            <CircleButton className="evolution-bar--button" width="15%" onClick={next}>NEXT</CircleButton>
         </nav>
     )
 }

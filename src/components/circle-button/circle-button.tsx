@@ -3,13 +3,14 @@ import "./circle-button.css"
 
 interface IECircleButtonProps {
     children : ReactChild, 
-    className : string, 
-    width : string // unit %
+    className? : string, 
+    width : string // unit %,
+    onClick? : ()=>void
 }
 
-export default  function CircleButton ({children, className, width} : {children : ReactChild, className : string, width : string}) {
+export default  function CircleButton ({children, className, width, onClick} : IECircleButtonProps) {
 
-    const buttonRef = useRef<HTMLButtonElement>(null)
+    const buttonRef = useRef<HTMLDivElement>(null)
     const [height, setHeight] = useState(0)
 
     function adjustHeight () {
@@ -32,12 +33,11 @@ export default  function CircleButton ({children, className, width} : {children 
     }, [buttonRef])
 
     return (
-        <button className={`circle-button ${className ?? ""}`} ref={buttonRef} style={{width : width, height : height + "px"}}>
-            <span className="circle-button--child">
+        <div className={`circle-button ${className ?? ""}`} ref={buttonRef} style={{width : width, height : height + "px"}}>
+            <button className="circle-button--child" onClick={onClick} data-testid="circle-button">
                 <span className="circle-button--border"></span>
                 {children}
-            </span>
-            
-        </button>
+            </button>        
+        </div>
     )
 } 

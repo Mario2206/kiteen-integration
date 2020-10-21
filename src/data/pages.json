@@ -1,0 +1,24 @@
+[
+    {
+        "title" : "Artistic Work",
+        "description" : "Phasellus finibus enim nulla, quis ornare odio facilisis eu. Suspendisse ornare ante sit amet arcu semper, vel eleifend tortor egestas ",
+        "imgName" : "img1.png",
+        "color":"#FFF396"
+
+    },
+    {
+        "title" : "Ornate Style",
+        "description" : "Phasellus finibus enim nulla, quis ornare odio facilisis eu. Suspendisse ornare ante sit amet arcu semper, vel eleifend tortor egestas ",
+        "imgName" : "img2.png",
+        "color":"#83DCFF"
+
+    },
+    {
+        "title" : "Chic Design",
+        "description" : "Phasellus finibus enim nulla, quis ornare odio facilisis eu. Suspendisse ornare ante sit amet arcu semper, vel eleifend tortor egestas ",
+        "imgName" : "img3.png",
+        "color":"#E6E4E5"
+
+    }
+
+]
