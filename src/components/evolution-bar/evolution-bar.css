@@ -1,17 +1,12 @@
 .evolution-bar {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    padding-bottom: 30px;
+
     width: 85%;
 }
 .evolution-bar--button {
-    background: none;
-    border: none;
     font-family: "Moon-regular";
-    cursor: pointer;
-    outline: none;
-    width: 25%;
 }
 .evolution-bar--button:hover::before {
     transform: scale(1);
@@ -19,16 +14,21 @@
 .evolution-bar--container-bar {
     width: 50%;
     height: 2px;
+    display: block;
+    width: 40%;
+    background-color: var(--grey-color);
+    border-radius: 100px;
+    position: relative;
 }
-.evolution-bar--bar {
+/* .evolution-bar--bar {
     height: 100%;
     display: block;
     width: 100%;
     background-color: var(--grey-color);
     border-radius: 100px;
     position: relative;
-}
-.evolution-bar--bar::before {
+} */
+.evolution-bar--bar{
     box-sizing: border-box;
     content: "";
     position: absolute;

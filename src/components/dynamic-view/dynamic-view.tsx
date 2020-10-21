@@ -29,7 +29,7 @@ export default function DynamicView () {
                     <NavBar/> 
                 </div>  
                 <div className="dynamic-view--evolution-bar-container">
-                    <EvolutionBar />    
+                    <EvolutionBar evolution={0.2}/>    
                 </div>           
             </div>     
         </section>       

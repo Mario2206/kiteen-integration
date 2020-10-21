@@ -1,5 +1,4 @@
 import React, { useCallback, useState } from 'react';
-import { useAnim } from '../../hooks/use-anim/use-anim';
 import BurgerButton from '../burger-button/burger-button';
 import NavButton from '../nav-button/nav-button';
 import "./nav-bar.css"

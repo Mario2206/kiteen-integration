@@ -1,0 +1,26 @@
+.circle-button {
+    background: none;
+    border: none;
+    outline: none;
+    position: relative;
+}
+.circle-button--border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid var(--blue-color);
+    box-sizing: border-box;
+    height: 100%;
+    border-radius: 100px;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: 0.3s;
+}
+.circle-button--child {
+    cursor: pointer;
+}
+.circle-button--child:hover .circle-button--border {
+    transform: scale(1);
+    opacity: 1;
+}
