@@ -26,7 +26,7 @@
     overflow-y: auto;
 }
 .dynamic-view--main-title {
-    font-size: 8em;
+    font-size: 6.5vw;
     font-family:"Didot";
     font-weight: lighter;
     font-stretch: expanded; 
@@ -41,6 +41,8 @@
 }
 .dynamic-view--explore-button {
     margin-top: 30px;
+    position: relative;
+    z-index: 2;
 }
 
 /* CSS TRANSITION */

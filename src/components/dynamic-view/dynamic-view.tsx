@@ -28,7 +28,7 @@ export default function DynamicView ({className, title, description, img, color,
                     </p>
                 </div>  
                 <ExploreButton className="dynamic-view--explore-button" /> 
-                <img src={img} alt="photo" className="miniature"/>                          
+                <img src={img} alt="miniature" className="miniature"/>                          
             </section>       
         </CSSTransition>
       

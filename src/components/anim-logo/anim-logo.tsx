@@ -12,7 +12,6 @@ function AnimLogoComponent ({value, className} : {value : string, className? : s
     const animDuration = 1
 
     const [anim, setAnim] = useAnim("")
-    const [text, setText] = useState("")
     const [active, setActiveState] = useState(false)
 
     const onHoverEnter = useCallback(() => {    
@@ -24,17 +23,15 @@ function AnimLogoComponent ({value, className} : {value : string, className? : s
             if(active) {
                 setAnim(`moveBack ${animDuration}s forwards`)
                 currentOut.beginElement()
-                setText("")
             }
             else
             {
                 setAnim(`moveLeft ${animDuration}s forwards`)
                 currentEnter.beginElement()
-                setText(value)
             }
             setActiveState(state=>!state)
         }  
-    }, [active])
+    }, [active, setAnim])
 
     return (
         <div className={`anim-logo ${className ?? ""}`} onMouseEnter={onHoverEnter} ref={buttonRef}>

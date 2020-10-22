@@ -8,6 +8,7 @@
     justify-content: space-between;
     cursor: pointer;
     outline: none;
+    position: relative;
 }
 .burger-button::before, .burger-button::after {
     content: "";
@@ -15,4 +16,12 @@
     height: 2px;
     display: block;
     background-color: black;
+    transition: 0.3s;
+}
+.burger-button_cross::before {
+    transform: rotate(45deg);
+}
+.burger-button_cross::after {
+    transform: rotate(-45deg);
+    position: absolute;
 }

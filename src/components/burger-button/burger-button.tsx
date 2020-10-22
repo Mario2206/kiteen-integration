@@ -1,9 +1,20 @@
 import React, { CSSProperties } from "react"
 import "./burger-button.css"
 
-export default function BurgerButton ({onCLick, style} : {onCLick? : ()=>void, style? : CSSProperties}) {
+interface IEBurgerButtonProps {
+    onCLick? : ()=>void, 
+    style? : CSSProperties, 
+    active : boolean
+}
+
+export default function BurgerButton ({onCLick, style, active} : IEBurgerButtonProps) {
 
     return (
-        <button onClick={onCLick} style={style}  className="burger-button" data-testid="burger-button"></button>
+        <button 
+        onClick={onCLick} 
+        style={style}  
+        className={`burger-button ${active ? "burger-button_cross" : ""}`}
+        data-testid="burger-button"
+        ></button>
     )
 }
