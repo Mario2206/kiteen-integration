@@ -12,7 +12,7 @@
 }
 .evolution-bar--container-bar {
     width: 50%;
-    height: 2px;
+    height: 1.5px;
     display: block;
     width: 40%;
     background-color: var(--grey-color);

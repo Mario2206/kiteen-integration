@@ -9,6 +9,7 @@
     cursor: pointer;
     letter-spacing: 2px;
     font-size: 0.8em;
+    color: var(--blue-color);
 }
 .nav-button::before {
     content: "";

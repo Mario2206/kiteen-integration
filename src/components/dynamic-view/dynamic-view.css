@@ -1,3 +1,6 @@
+:root {
+    --anim-duration : 1.5s;
+}
 .dynamic-view {
     display: flex;
     position: relative;
@@ -18,7 +21,9 @@
     transform-origin: top;
 }
 .dynamic-view--container-text {
+    height: 30%;
     z-index: 2;
+    overflow-y: auto;
 }
 .dynamic-view--main-title {
     font-size: 8em;
@@ -55,21 +60,32 @@
     /* transform: scaleY(0); */
     clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
 }
+.dynamic-view-enter .dynamic-view--container-text {
+    transform: translateY(200%);
+    opacity: 0;
+}
 
 /* ENTER ACTIVE */
 
 .dynamic-view-enter-active {
     opacity: 1;
-    transition: 1000ms;
+    transition: var(--anim-duration);
 }
 .dynamic-view-enter-active .dynamic-view--background {
-    transition: 0.5s;
+    transition: var(--anim-duration);
     transform: scaleY(1);
 }
 .dynamic-view-enter-active .miniature {
     transform-origin: bottom;
     clip-path: polygon(0% 0%, 100% 00%, 100% 100%, 0% 100% );
-    transition: 0.5s;
+    transition: var(--anim-duration);
+}
+.dynamic-view-enter-active .dynamic-view--container-text {
+    transform: translateY(0%);
+    transition: var(--anim-duration);
+    opacity: 1;
+    transition-timing-function: ease;
+    transition-delay: 0.5s;
 }
 
 /* EXIT */
@@ -82,5 +98,5 @@
 
 .dynamic-view-exit-active {
     opacity: 0;
-    transition: 2s;
+    transition: var(--anim-duration);
 }

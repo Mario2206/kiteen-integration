@@ -41,7 +41,7 @@ function App() {
   return (
     <main className="app">
       <div className="app--left-part">
-          <AnimLogo value="KITEEN" className="app--logo"/>
+          <AnimLogo value="KITTEN" className="app--logo"/>
           {
             displayView()
           }

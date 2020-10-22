@@ -32,3 +32,44 @@
         transform: translateX(100%);
     }
 }
+
+/* CSS TRANSITION */
+
+/* ENTER */
+.nav-bar--nav-button-enter {
+    transform: translateY(-200%);
+}
+
+/* ENTER ACTIVE */
+.nav-bar--nav-button-enter-active {
+    transform : translateY(0);
+    transition: 0.3s;
+}
+.nav-bar--nav-button-enter-active:nth-child(1){
+    transition-delay: 0s;
+}
+.nav-bar--nav-button-enter-active:nth-child(2){
+    transition-delay: 100ms;
+}
+.nav-bar--nav-button-enter-active:nth-child(3){
+    transition-delay: 0.2s;
+}
+/* EXIT */
+.nav-bar--nav-button-exit {
+    transform: translateY(0);
+}
+
+/* EXIT ACTIVE */
+.nav-bar--nav-button-exit-active {
+    transform : translateY(-200%);
+    transition: 0.3s;
+}
+.nav-bar--nav-button-exit-active:nth-child(1){
+    transition-delay: 0ms;
+}
+.nav-bar--nav-button-exit-active:nth-child(2){
+    transition-delay: 100ms;
+}
+.nav-bar--nav-button-exit-active:nth-child(3){
+    transition-delay: 200ms;
+}

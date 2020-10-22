@@ -18,7 +18,7 @@ export default function DynamicView ({className, title, description, img, color,
     const sectionRef = useRef<HTMLElement>(null)
 
     return (
-        <CSSTransition in={visible} classNames="dynamic-view" timeout={1000} unmountOnExit nodeRef={sectionRef}>
+        <CSSTransition in={visible} classNames="dynamic-view" timeout={3000} unmountOnExit nodeRef={sectionRef}>
             <section className={`dynamic-view ${className ?? ""}`} ref={sectionRef}>  
                 <div className="dynamic-view--background"  style={{backgroundColor : color}}></div>         
                 <div className="dynamic-view--container-text">
@@ -26,8 +26,8 @@ export default function DynamicView ({className, title, description, img, color,
                     <p className="dynamic-view--description">
                         {description}
                     </p>
-                    <ExploreButton className="dynamic-view--explore-button" />
-                </div>   
+                </div>  
+                <ExploreButton className="dynamic-view--explore-button" /> 
                 <img src={img} alt="photo" className="miniature"/>                          
             </section>       
         </CSSTransition>

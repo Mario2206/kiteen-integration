@@ -61,18 +61,22 @@ body {
 @font-face {
     font-family: "Moon-regular";
     src: url("./assets/font/Moon2.0-Regular.otf");
+    font-display: swap;
 }
 @font-face {
     font-family: "Moon";
     src: url("./assets/font/Moon-Bold.otf");
     font-weight: 500;
+    font-display: swap;
 }
 @font-face {
     font-family: "Moon";
     src: url("./assets/font/Moon2.0-Light.otf");
     font-weight: lighter;
+    font-display: swap;
 }
 @font-face {
     font-family: "Didot";
     src: url("./assets/font/Didot-medium.ttf");
+    font-display: swap;
 }
