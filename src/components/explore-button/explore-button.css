@@ -51,3 +51,12 @@
         clip-path: circle(100%);
     }
 }
+@media screen and (max-width : 650px) {
+    .explore-button {
+        padding: 15px;
+        width: 150px;
+    }
+    .explore-button--text {
+        font-size: .8em;
+    }
+}

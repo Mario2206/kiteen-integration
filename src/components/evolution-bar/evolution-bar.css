@@ -14,7 +14,7 @@
     width: 50%;
     height: 1.5px;
     display: block;
-    width: 40%;
+    flex: 1;
     background-color: var(--grey-color);
     border-radius: 100px;
     position: relative;

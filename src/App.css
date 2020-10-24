@@ -1,3 +1,26 @@
+@font-face {
+    font-family: "Moon-regular";
+    src: url("./assets/font/Moon2.0-Regular.otf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Moon";
+    src: url("./assets/font/Moon-Bold.otf");
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Moon";
+    src: url("./assets/font/Moon2.0-Light.otf");
+    font-weight: lighter;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Didot";
+    src: url("./assets/font/Didot-medium.ttf");
+    font-display: swap;
+}
+
 :root {
     --back-blue-color : #83DCFF;
     --back-yellow-color : #FFF396;
@@ -47,7 +70,8 @@ body {
     box-sizing: border-box;
 }
 .app--evolution-bar-container {
-    width: 80%;
+    width: 60%;
+    align-self: center;
 }
 .app--dynamic-view {
     box-sizing: border-box;
@@ -55,28 +79,36 @@ body {
     width: 100%;
     padding-left: 20%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+
 }
-@font-face {
-    font-family: "Moon-regular";
-    src: url("./assets/font/Moon2.0-Regular.otf");
-    font-display: swap;
+
+@media screen and (max-width : 1050px) {
+    .app--container-nav {
+        width: 80%;
+    }
+    .app--evolution-bar-container {
+        width: 80%;
+    }
 }
-@font-face {
-    font-family: "Moon";
-    src: url("./assets/font/Moon-Bold.otf");
-    font-weight: 500;
-    font-display: swap;
+@media screen and (max-width : 850px) {
+    .app--right-part {
+        padding: 30px 20px;
+    }
+    .app--container-nav, .app--evolution-bar-container {
+        width: 100%;
+    }
 }
-@font-face {
-    font-family: "Moon";
-    src: url("./assets/font/Moon2.0-Light.otf");
-    font-weight: lighter;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Didot";
-    src: url("./assets/font/Didot-medium.ttf");
-    font-display: swap;
+@media screen and (max-width : 650px) {
+
+    .app--right-part {
+        width: 100%;
+    }
+    .app--left-part {
+        position: absolute;
+        height: 70vh;
+        width: 80%;
+    }
+    .app--evolution-bar-container {
+        width: 75%;
+    }
 }

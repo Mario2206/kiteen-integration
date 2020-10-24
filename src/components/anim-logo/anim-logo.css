@@ -60,3 +60,16 @@
         transform: translateX(0%);
     }
 }
+/* RESPONSIVE */
+@media screen and (max-width : 850px) {
+    .anim-logo {
+        width: 150px;
+        height: 150px;
+    }
+}
+@media screen and (max-width : 650px) {
+    .anim-logo {
+        width: 100px;
+        height: 100px;
+    }
+}

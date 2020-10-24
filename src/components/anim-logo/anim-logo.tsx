@@ -42,7 +42,12 @@ function AnimLogoComponent ({value, className} : {value : string, className? : s
                 viewBox="0 0 56.569 56.569" 
                 className="anim-logo--picture"
                 >
-                    <path id="Logo-2" data-name="Logo" d=" M-1269.909,728H-1286V711.909h10.909V688H-1246V717.09h-23.909V728Zm-5.182-16.091v5.182h5.182v-5.182Z" transform="translate(1424.113 422.85) rotate(45)" fill="#2f3245">
+                    <path 
+                    id="Logo-2" 
+                    data-name="Logo" 
+                    d=" M-1269.909,728H-1286V711.909h10.909V688H-1246V717.09h-23.909V728Zm-5.182-16.091v5.182h5.182v-5.182Z"
+                    transform="translate(1424.113 422.85) rotate(45)" 
+                    fill="#2f3245">
                         <animate
                         ref={animateRefEnter}
                         dur="0.2s"
