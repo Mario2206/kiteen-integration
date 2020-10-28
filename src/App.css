@@ -68,6 +68,7 @@ body {
     align-items: flex-end;
     padding: 30px 50px;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 .app--evolution-bar-container {
     width: 60%;
@@ -105,10 +106,21 @@ body {
     }
     .app--left-part {
         position: absolute;
-        height: 70vh;
-        width: 80%;
+        height: 70%;
+        width: 75%;
     }
     .app--evolution-bar-container {
         width: 75%;
+    }
+}
+@media screen and (max-height : 600px) {
+    body {
+        overflow: auto;
+    }
+    .app {
+        height: 120vh;
+    }
+    .app--left-part {
+        height: 85% ;
     }
 }

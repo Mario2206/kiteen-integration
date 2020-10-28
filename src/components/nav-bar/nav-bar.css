@@ -73,3 +73,34 @@
 .nav-bar--nav-button-exit-active:nth-child(3){
     transition-delay: 200ms;
 }
+@media screen and (max-width : 650px) {
+    .nav-bar {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+    .nav-bar--container-items {
+        flex-direction: column;
+        width: auto;
+        padding: 0;
+        align-items: flex-end;
+    }
+    .nav-bar--container-items  > div {
+        width: auto;
+        margin: 10px 0;
+    }
+    .nav-bar--nav-button-enter {
+        transform: translateX(200%);
+    }
+    
+    .nav-bar--nav-button-enter-active {
+        transform : translateX(0);
+        transition: 0.3s;
+    }
+    .nav-bar--nav-button-exit {
+        transform: translateX(0);
+    }
+    .nav-bar--nav-button-exit-active {
+        transform : translateX(200%);
+        transition: 0.3s;
+    }
+}
