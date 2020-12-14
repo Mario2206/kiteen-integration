@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/kitten-integration/static/css/main.1f7d67d7.chunk.css",
+    "main.js": "/kitten-integration/static/js/main.72940773.chunk.js",
+    "main.js.map": "/kitten-integration/static/js/main.72940773.chunk.js.map",
+    "runtime-main.js": "/kitten-integration/static/js/runtime-main.54e48f9d.js",
+    "runtime-main.js.map": "/kitten-integration/static/js/runtime-main.54e48f9d.js.map",
+    "static/js/2.d5a0e956.chunk.js": "/kitten-integration/static/js/2.d5a0e956.chunk.js",
+    "static/js/2.d5a0e956.chunk.js.map": "/kitten-integration/static/js/2.d5a0e956.chunk.js.map",
+    "index.html": "/kitten-integration/index.html",
+    "precache-manifest.fd2bbe3a86d39426b2a165b27c6e89d3.js": "/kitten-integration/precache-manifest.fd2bbe3a86d39426b2a165b27c6e89d3.js",
+    "service-worker.js": "/kitten-integration/service-worker.js",
+    "static/css/main.1f7d67d7.chunk.css.map": "/kitten-integration/static/css/main.1f7d67d7.chunk.css.map",
+    "static/js/2.d5a0e956.chunk.js.LICENSE.txt": "/kitten-integration/static/js/2.d5a0e956.chunk.js.LICENSE.txt",
+    "static/media/app.css": "/kitten-integration/static/media/Moon2.0-Regular.beaab266.otf",
+    "static/media/img1.png": "/kitten-integration/static/media/img1.f1aec09f.png",
+    "static/media/img2.png": "/kitten-integration/static/media/img2.856a70d4.png",
+    "static/media/img3.png": "/kitten-integration/static/media/img3.9348123f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.54e48f9d.js",
+    "static/js/2.d5a0e956.chunk.js",
+    "static/css/main.1f7d67d7.chunk.css",
+    "static/js/main.72940773.chunk.js"
+  ]
+}
